@@ -1,0 +1,8 @@
+_target_: pytorch_lightning.Trainer
+_partial_: True
+logger: ${logger}
+max_epochs: ${max_epochs}
+accelerator: ${device}
+num_sanity_val_steps: 0
+precision: ${precision}
+accumulate_grad_batches: ${accumulate_grad_batches}

@@ -1,0 +1,7 @@
+_target_: src.data.LitMnist
+data_folder: data
+transforms: ${augmentations}
+val_pct: 0.1
+batch_size: ${batch_size}
+random_state: ${random_state}
+num_workers: ${num_workers}

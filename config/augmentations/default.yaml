@@ -1,0 +1,21 @@
+train:
+  _target_: torchvision.transforms.Compose
+  transforms:
+    - _target_: torchvision.transforms.ColorJitter
+    - _target_: torchvision.transforms.RandomAutocontrast
+    - _target_: torchvision.transforms.RandomInvert
+      p: 0.5
+    - _target_: torchvision.transforms.ToTensor
+    - _target_: torchvision.transforms.Normalize
+      _args_: 
+      - [0.485]
+      - [0.229]
+
+test:
+  _target_: torchvision.transforms.Compose
+  transforms:
+    - _target_: torchvision.transforms.ToTensor
+    - _target_: torchvision.transforms.Normalize
+      _args_: 
+      - [0.485]
+      - [0.229]
