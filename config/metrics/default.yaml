@@ -1,0 +1,21 @@
+_target_: torchmetrics.MetricCollection
+metrics:
+  - _target_: torchmetrics.classification.MulticlassAccuracy
+    num_classes: ${num_classes}
+    average: macro
+    device: ${device}
+
+  - _target_: torchmetrics.classification.MulticlassPrecision
+    average: macro
+    num_classes: ${num_classes}
+    device: ${device}
+
+  - _target_: torchmetrics.classification.MulticlassRecall
+    average: macro
+    num_classes: ${num_classes}
+    device: ${device}
+    
+  - _target_: torchmetrics.classification.MulticlassF1Score
+    average: macro  
+    num_classes: ${num_classes}
+    device: ${device}

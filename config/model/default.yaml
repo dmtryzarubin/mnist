@@ -1,0 +1,6 @@
+_target_: timm.create_model
+model_name: mobilenetv2_035
+pretrained: true
+in_chans: 1
+num_classes: ${num_classes}
+drop_rate: 0.1
