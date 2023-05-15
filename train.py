@@ -1,7 +1,6 @@
 import warnings
 
 import hydra
-import pytorch_lightning as pl
 import torch
 from src.model import LitModel
 from omegaconf import DictConfig, OmegaConf
