@@ -5,6 +5,7 @@ from src import LitModel
 hydra.initialize(config_path="../config", job_name="test_app")
 test_cfg = hydra.compose(config_name="tests")
 cfg = hydra.compose(config_name=test_cfg.config_name)
+cfg.device = "cpu"
 
 
 def test_model():
