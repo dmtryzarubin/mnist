@@ -3,6 +3,7 @@ import typing as ty
 import hydra
 import pytorch_lightning as pl
 import torch
+from omegaconf import DictConfig
 
 __all__ = ["LitModel"]
 
@@ -10,7 +11,7 @@ __all__ = ["LitModel"]
 class LitModel(pl.LightningModule):
     logger_mapping = {"train": 0, "valid": 1}
 
-    def __init__(self, cfg) -> None:
+    def __init__(self, cfg: DictConfig) -> None:
         super().__init__()
         self.cfg = cfg
         self.model = hydra.utils.instantiate(cfg.model)
