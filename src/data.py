@@ -6,6 +6,8 @@ import torch
 import torchvision
 from torch.utils.data import DataLoader
 
+__all__ = ["LitMnist"]
+
 
 class LitMnist(pl.LightningDataModule):
     def __init__(
