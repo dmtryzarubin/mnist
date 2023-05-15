@@ -1,0 +1,11 @@
+config_name: train
+
+dataset_names:
+  - train_data
+  - val_data
+  - test_data
+
+loaders:
+  - train_dataloader
+  - val_dataloader
+  - test_dataloader
